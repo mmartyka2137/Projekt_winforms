@@ -13,11 +13,16 @@ namespace Projekt_winforms
     public partial class Form2 : Form
     {
         
+        public string usernamein;
+        public DateFormatter dateformatter;
+        
 
-        public Form2()
+        public Form2(string username)
         {
             InitializeComponent();
+            usernamein = username;
             timer1.Start();
+            dateformatter = new DateFormatter();
         }
 
 
@@ -37,6 +42,14 @@ namespace Projekt_winforms
         private void label1_Click_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Date date = new Date(2000, 02, 17);
+            string datesql = dateformatter.ToSQLString(date); 
+            SqlManager sqlmanager = new SqlManager(usernamein);
+            sqlmanager.AddDate(datesql, "urodziny", usernamein);
         }
     }
 }
