@@ -17,3 +17,4 @@ E:\studia\programowanie\Projekt\Projekt_winforms\Projekt_winforms\obj\Debug\Proj
 E:\studia\programowanie\Projekt\Projekt_winforms\Projekt_winforms\obj\Debug\Projekt_.7D69B5F4.Up2Date
 E:\studia\programowanie\Projekt\Projekt_winforms\Projekt_winforms\obj\Debug\Projekt_winforms.exe
 E:\studia\programowanie\Projekt\Projekt_winforms\Projekt_winforms\obj\Debug\Projekt_winforms.pdb
+E:\studia\programowanie\Projekt\Projekt_winforms\Projekt_winforms\obj\Debug\Projekt_winforms.Form2.resources

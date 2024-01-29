@@ -6,15 +6,15 @@ using System.Threading.Tasks;
 
 namespace Projekt_winforms
 {
-    public static class DateFormatter
+    public class DateFormatter
     {
-        public static string FormatDate(Date date, string format)
+        public string FormatDate(Date date, string format)
         {
             return date.Value.ToString(format);
         }
 
         // Dodatkowa metoda dla wygodnego formatowania do krótkiej postaci daty
-        public static string ToShortDateString(Date date)
+        public string ToShortDateString(Date date)
         {
             return date.Value.ToShortDateString();
         }
