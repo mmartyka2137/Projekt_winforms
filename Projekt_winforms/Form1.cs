@@ -42,9 +42,10 @@ namespace Projekt_winforms
 
                 if (connected)
                 {
+                    string username = username_txt.Text;
                     MessageBox.Show("Pomyślnie zalogowano");
                     this.Hide();
-                    Form2 f2 = new Form2();
+                    Form2 f2 = new Form2(username);
                     f2.ShowDialog();
                 }
                 else
