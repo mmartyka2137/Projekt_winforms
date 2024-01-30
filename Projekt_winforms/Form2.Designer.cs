@@ -37,11 +37,15 @@
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.ZapisDaty = new System.Windows.Forms.GroupBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.Editbutton = new System.Windows.Forms.Button();
-            this.Deletebutton = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.Deletebutton = new System.Windows.Forms.Button();
+            this.Editbutton = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.Id = new System.Windows.Forms.Label();
+            this.id_value = new System.Windows.Forms.Label();
+            this.Czyscik = new System.Windows.Forms.Button();
+            this.Refresh = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.ZapisDaty.SuspendLayout();
             this.SuspendLayout();
@@ -112,6 +116,10 @@
             // 
             // ZapisDaty
             // 
+            this.ZapisDaty.Controls.Add(this.Refresh);
+            this.ZapisDaty.Controls.Add(this.Czyscik);
+            this.ZapisDaty.Controls.Add(this.id_value);
+            this.ZapisDaty.Controls.Add(this.Id);
             this.ZapisDaty.Controls.Add(this.comboBox1);
             this.ZapisDaty.Controls.Add(this.Deletebutton);
             this.ZapisDaty.Controls.Add(this.Editbutton);
@@ -126,36 +134,16 @@
             this.ZapisDaty.TabIndex = 6;
             this.ZapisDaty.TabStop = false;
             this.ZapisDaty.Text = "Zapisywanie daty do bazy";
+            this.ZapisDaty.Enter += new System.EventHandler(this.ZapisDaty_Enter);
             // 
-            // label2
+            // comboBox1
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(29, 138);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(30, 13);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "Data";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(31, 202);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(28, 13);
-            this.label3.TabIndex = 7;
-            this.label3.Text = "Opis";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
-            // 
-            // Editbutton
-            // 
-            this.Editbutton.Location = new System.Drawing.Point(149, 246);
-            this.Editbutton.Name = "Editbutton";
-            this.Editbutton.Size = new System.Drawing.Size(121, 44);
-            this.Editbutton.TabIndex = 8;
-            this.Editbutton.Text = "Edytuj Datę";
-            this.Editbutton.UseVisualStyleBackColor = true;
-            this.Editbutton.Click += new System.EventHandler(this.Editbutton_Click);
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(355, 135);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.TabIndex = 10;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // Deletebutton
             // 
@@ -167,14 +155,75 @@
             this.Deletebutton.UseVisualStyleBackColor = true;
             this.Deletebutton.Click += new System.EventHandler(this.Deletebutton_Click);
             // 
-            // comboBox1
+            // Editbutton
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(355, 135);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 10;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.Editbutton.Location = new System.Drawing.Point(149, 246);
+            this.Editbutton.Name = "Editbutton";
+            this.Editbutton.Size = new System.Drawing.Size(121, 44);
+            this.Editbutton.TabIndex = 8;
+            this.Editbutton.Text = "Edytuj Datę";
+            this.Editbutton.UseVisualStyleBackColor = true;
+            this.Editbutton.Click += new System.EventHandler(this.Editbutton_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(31, 202);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(28, 13);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "Opis";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(29, 138);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(30, 13);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "Data";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // Id
+            // 
+            this.Id.AutoSize = true;
+            this.Id.Location = new System.Drawing.Point(29, 96);
+            this.Id.Name = "Id";
+            this.Id.Size = new System.Drawing.Size(16, 13);
+            this.Id.TabIndex = 11;
+            this.Id.Text = "Id";
+            this.Id.Click += new System.EventHandler(this.label4_Click);
+            // 
+            // id_value
+            // 
+            this.id_value.AutoSize = true;
+            this.id_value.Location = new System.Drawing.Point(73, 96);
+            this.id_value.Name = "id_value";
+            this.id_value.Size = new System.Drawing.Size(16, 13);
+            this.id_value.TabIndex = 12;
+            this.id_value.Text = " - ";
+            this.id_value.Click += new System.EventHandler(this.id_value_Click);
+            // 
+            // Czyscik
+            // 
+            this.Czyscik.Location = new System.Drawing.Point(149, 309);
+            this.Czyscik.Name = "Czyscik";
+            this.Czyscik.Size = new System.Drawing.Size(121, 42);
+            this.Czyscik.TabIndex = 13;
+            this.Czyscik.Text = "Wyczyść Pola";
+            this.Czyscik.UseVisualStyleBackColor = true;
+            this.Czyscik.Click += new System.EventHandler(this.Czyscik_Click);
+            // 
+            // Refresh
+            // 
+            this.Refresh.Location = new System.Drawing.Point(371, 96);
+            this.Refresh.Name = "Refresh";
+            this.Refresh.Size = new System.Drawing.Size(90, 23);
+            this.Refresh.TabIndex = 14;
+            this.Refresh.Text = "Odśwież bazę";
+            this.Refresh.UseVisualStyleBackColor = true;
+            this.Refresh.Click += new System.EventHandler(this.Refresh_Click);
             // 
             // Form2
             // 
@@ -208,5 +257,9 @@
         private System.Windows.Forms.Button Editbutton;
         private System.Windows.Forms.Button Deletebutton;
         private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label Id;
+        private System.Windows.Forms.Label id_value;
+        private System.Windows.Forms.Button Czyscik;
+        private System.Windows.Forms.Button Refresh;
     }
 }

@@ -70,12 +70,12 @@ namespace Projekt_winforms
 
         private void Editbutton_Click(object sender, EventArgs e)
         {
-            sqlmanager.EditDate(this.dateTimePicker1.Text, this.textBox1.Text, usernamein);
+            sqlmanager.EditDate(int.Parse(this.id_value.Text), this.dateTimePicker1.Text, this.textBox1.Text, usernamein);
         }
 
         private void Deletebutton_Click(object sender, EventArgs e)
         {
-            sqlmanager.DeleteDate(this.dateTimePicker1.Text, this.textBox1.Text, usernamein);
+            sqlmanager.DeleteDate(int.Parse(this.id_value.Text), this.dateTimePicker1.Text, this.textBox1.Text, usernamein);
         }
 
         private void AddStringbutton_Click(object sender, EventArgs e)
@@ -86,12 +86,39 @@ namespace Projekt_winforms
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            sqlmanager.ComboValuesReader(comboBox1, textBox1, dateTimePicker1);
+            sqlmanager.ComboValuesReader(id_value, comboBox1, textBox1, dateTimePicker1);
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ZapisDaty_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void id_value_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Czyscik_Click(object sender, EventArgs e)
+        {
+            this.id_value.Text = "";
+            this.textBox1.Text = "";
+            this.dateTimePicker1.Text = "";
+        }
+
+        private void Refresh_Click(object sender, EventArgs e)
+        {
+            sqlmanager.RefreshCombo(comboBox1);
         }
     }
 }

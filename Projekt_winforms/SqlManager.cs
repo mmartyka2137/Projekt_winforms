@@ -45,10 +45,10 @@ namespace Projekt_winforms
             }
         }
 
-        public void EditDate(string date, string description, string loggedusername)
+        public void EditDate(int id, string date, string description, string loggedusername)
         {
             string myConnection = "datasource=localhost;port=3306;username=root;database=Daty;";
-            string editDate = "update Daty.dates set date = '" + date + "',description =  '" + description + "' ,user_id = (select users.id from users where username = '" + username + "') where id = 9;";
+            string editDate = "update Daty.dates set date = '" + date + "',description =  '" + description + "' ,user_id = (select users.id from users where username = '" + username + "') where id = " + id + ";";
             MySqlConnection myConn = new MySqlConnection(myConnection);
             MySqlCommand command = new MySqlCommand(editDate, myConn);
             MySqlDataReader myReader;
@@ -68,12 +68,12 @@ namespace Projekt_winforms
             }
         }
 
-        public void DeleteDate(string date, string description, string loggedusername)
+        public void DeleteDate(int id, string date, string description, string loggedusername)
         {
             string myConnection = "datasource=localhost;port=3306;username=root;database=Daty;";
-            string editDate = "delete from Daty.dates where id = 9;";
+            string deleteDate = "delete from Daty.dates where id = " + id + ";";
             MySqlConnection myConn = new MySqlConnection(myConnection);
-            MySqlCommand command = new MySqlCommand(editDate, myConn);
+            MySqlCommand command = new MySqlCommand(deleteDate, myConn);
             MySqlDataReader myReader;
             try
             {
@@ -94,9 +94,9 @@ namespace Projekt_winforms
         public void FillCombo(ComboBox comboBox)
         {
             string myConnection = "datasource=localhost;port=3306;username=root;database=Daty;";
-            string editDate = "select * from Daty.dates";
+            string fillDate = "select * from Daty.dates";
             MySqlConnection myConn = new MySqlConnection(myConnection);
-            MySqlCommand command = new MySqlCommand(editDate, myConn);
+            MySqlCommand command = new MySqlCommand(fillDate, myConn);
             MySqlDataReader myReader;
             try
             {
@@ -113,8 +113,32 @@ namespace Projekt_winforms
                 MessageBox.Show(ex.Message);
             }
         }
+        public void RefreshCombo(ComboBox comboBox)
+        {
+            string myConnection = "datasource=localhost;port=3306;username=root;database=Daty;";
+            string refreshDate = "select * from Daty.dates";
+            MySqlConnection myConn = new MySqlConnection(myConnection);
+            MySqlCommand command = new MySqlCommand(refreshDate, myConn);
+            MySqlDataReader myReader;
+            try
+            {
+                myConn.Open();
+                myReader = command.ExecuteReader();
+                comboBox.Items.Clear();
+                while (myReader.Read())
+                {
+                    string sDesc = myReader.GetString("description");
+                    comboBox.Items.Add(sDesc);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
 
-        public void ComboValuesReader(ComboBox comboBox, TextBox textbox, DateTimePicker dateTimePicker)
+
+        public void ComboValuesReader(Label id, ComboBox comboBox, TextBox textbox, DateTimePicker dateTimePicker)
         {
             string myConnection = "datasource=localhost;port=3306;username=root;database=Daty;";
             string editDate = "select * from Daty.dates where description = '" + comboBox.Text + "'  ;";
@@ -127,11 +151,13 @@ namespace Projekt_winforms
                 myReader = command.ExecuteReader();
                 while (myReader.Read())
                 {
-                    int sId = myReader.GetInt32("id");
+                    string sId = myReader.GetInt32("id").ToString();
                     string sDesc = myReader.GetString("description");
                     DateTime sDate = myReader.GetDateTime("date");
+
                     textbox.Text = sDesc;
                     dateTimePicker.Value = sDate;
+                    id.Text = sId;
 
                 }
             }

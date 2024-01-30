@@ -15,16 +15,16 @@
       "RelativeMoniker": "D:0:0:{748922A2-CBEF-4F0C-A62F-6803DC6DC310}|Projekt_winforms\\Projekt_winforms.csproj|solutionrelative:projekt_winforms\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{748922A2-CBEF-4F0C-A62F-6803DC6DC310}|Projekt_winforms\\Projekt_winforms.csproj|e:\\studia\\programowanie\\projekt\\projekt_winforms\\projekt_winforms\\form2.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{748922A2-CBEF-4F0C-A62F-6803DC6DC310}|Projekt_winforms\\Projekt_winforms.csproj|solutionrelative:projekt_winforms\\form2.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{748922A2-CBEF-4F0C-A62F-6803DC6DC310}|Projekt_winforms\\Projekt_winforms.csproj|e:\\studia\\programowanie\\projekt\\projekt_winforms\\projekt_winforms\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{748922A2-CBEF-4F0C-A62F-6803DC6DC310}|Projekt_winforms\\Projekt_winforms.csproj|solutionrelative:projekt_winforms\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{748922A2-CBEF-4F0C-A62F-6803DC6DC310}|Projekt_winforms\\Projekt_winforms.csproj|e:\\studia\\programowanie\\projekt\\projekt_winforms\\projekt_winforms\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{748922A2-CBEF-4F0C-A62F-6803DC6DC310}|Projekt_winforms\\Projekt_winforms.csproj|solutionrelative:projekt_winforms\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{748922A2-CBEF-4F0C-A62F-6803DC6DC310}|Projekt_winforms\\Projekt_winforms.csproj|e:\\studia\\programowanie\\projekt\\projekt_winforms\\projekt_winforms\\form2.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{748922A2-CBEF-4F0C-A62F-6803DC6DC310}|Projekt_winforms\\Projekt_winforms.csproj|solutionrelative:projekt_winforms\\form2.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{748922A2-CBEF-4F0C-A62F-6803DC6DC310}|Projekt_winforms\\Projekt_winforms.csproj|e:\\studia\\programowanie\\projekt\\projekt_winforms\\projekt_winforms\\holidaychecker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -66,7 +66,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
@@ -76,7 +76,7 @@
               "RelativeDocumentMoniker": "Projekt_winforms\\Form2.cs",
               "ToolTip": "E:\\studia\\programowanie\\Projekt\\Projekt_winforms\\Projekt_winforms\\Form2.cs",
               "RelativeToolTip": "Projekt_winforms\\Form2.cs",
-              "ViewState": "AQIAAB8AAAAAAAAAAAAgwBIAAAAdAAAA",
+              "ViewState": "AQIAAHEAAAAAAAAAAAAAwHgAAAAkAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-01-29T13:58:46.36Z",
               "EditorCaption": ""
@@ -89,14 +89,26 @@
               "RelativeDocumentMoniker": "Projekt_winforms\\SqlManager.cs",
               "ToolTip": "E:\\studia\\programowanie\\Projekt\\Projekt_winforms\\Projekt_winforms\\SqlManager.cs",
               "RelativeToolTip": "Projekt_winforms\\SqlManager.cs",
-              "ViewState": "AQIAAEoAAAAAAAAAAAAQwBYAAAAJAAAA",
+              "ViewState": "AQIAAHMAAAAAAAAAAAAAAH4AAAAnAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-01-29T17:01:18.319Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 2,
+              "Title": "Form2.cs [Projekt]",
+              "DocumentMoniker": "E:\\studia\\programowanie\\Projekt\\Projekt_winforms\\Projekt_winforms\\Form2.cs",
+              "RelativeDocumentMoniker": "Projekt_winforms\\Form2.cs",
+              "ToolTip": "E:\\studia\\programowanie\\Projekt\\Projekt_winforms\\Projekt_winforms\\Form2.cs [Projekt]",
+              "RelativeToolTip": "Projekt_winforms\\Form2.cs [Projekt]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-01-29T14:01:06.884Z",
+              "EditorCaption": " [Projekt]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "Form1.cs [Projekt]",
               "DocumentMoniker": "E:\\studia\\programowanie\\Projekt\\Projekt_winforms\\Projekt_winforms\\Form1.cs",
               "RelativeDocumentMoniker": "Projekt_winforms\\Form1.cs",
@@ -108,20 +120,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "Form1.cs",
               "DocumentMoniker": "E:\\studia\\programowanie\\Projekt\\Projekt_winforms\\Projekt_winforms\\Form1.cs",
               "RelativeDocumentMoniker": "Projekt_winforms\\Form1.cs",
               "ToolTip": "E:\\studia\\programowanie\\Projekt\\Projekt_winforms\\Projekt_winforms\\Form1.cs",
               "RelativeToolTip": "Projekt_winforms\\Form1.cs",
-              "ViewState": "AQIAAB0AAAAAAAAAAAAwwCwAAAA4AAAA",
+              "ViewState": "AQIAABoAAAAAAAAAAAAwwCwAAAA4AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-01-29T11:59:50.823Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "Form2.Designer.cs",
               "DocumentMoniker": "E:\\studia\\programowanie\\Projekt\\Projekt_winforms\\Projekt_winforms\\Form2.Designer.cs",
               "RelativeDocumentMoniker": "Projekt_winforms\\Form2.Designer.cs",
@@ -142,8 +154,7 @@
               "RelativeToolTip": "Projekt_winforms\\HolidayChecker.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAADAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-01-29T11:36:57.675Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-01-29T11:36:57.675Z"
             },
             {
               "$type": "Document",
@@ -168,8 +179,7 @@
               "RelativeToolTip": "Projekt_winforms\\DateFormatter.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAB0AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-01-29T11:36:28.667Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-01-29T11:36:28.667Z"
             },
             {
               "$type": "Document",
@@ -217,8 +227,7 @@
               "RelativeToolTip": "Projekt_winforms\\Program.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-01-29T11:28:11.568Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-01-29T11:28:11.568Z"
             },
             {
               "$type": "Document",
@@ -231,39 +240,6 @@
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-01-29T11:35:16.211Z"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "Orientation": 0,
-      "VerticalTabListWidth": 256,
-      "FloatingWindowState": {
-        "Id": "3dce8083-46ac-4a8a-8eb1-28a056026cf0",
-        "Display": 0,
-        "X": 437,
-        "Y": 193,
-        "Width": 1430,
-        "Height": 814,
-        "WindowState": 0
-      },
-      "DocumentGroups": [
-        {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 0,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Form2.cs [Projekt]",
-              "DocumentMoniker": "E:\\studia\\programowanie\\Projekt\\Projekt_winforms\\Projekt_winforms\\Form2.cs",
-              "RelativeDocumentMoniker": "Projekt_winforms\\Form2.cs",
-              "ToolTip": "E:\\studia\\programowanie\\Projekt\\Projekt_winforms\\Projekt_winforms\\Form2.cs [Projekt]",
-              "RelativeToolTip": "Projekt_winforms\\Form2.cs [Projekt]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-01-29T14:01:06.884Z",
-              "EditorCaption": " [Projekt]"
             }
           ]
         }
