@@ -16,7 +16,7 @@ namespace Projekt_winforms
         public string usernamein;
         public DateFormatter dateformatter;
         private SqlManager sqlmanager;
-        private int idholder;
+        private DateCalculator dateCalculator;
 
 
         public Form2(string username)
@@ -26,6 +26,7 @@ namespace Projekt_winforms
             timer1.Start();
             dateformatter = new DateFormatter();
             sqlmanager = new SqlManager(usernamein);
+            dateCalculator = new DateCalculator();
             sqlmanager.FillCombo(comboBox1);
         }
 
@@ -119,6 +120,26 @@ namespace Projekt_winforms
         private void Refresh_Click(object sender, EventArgs e)
         {
             sqlmanager.RefreshCombo(comboBox1);
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            sqlmanager.ShowTableView(dataGridView1);
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Odejmij_Click(object sender, EventArgs e)
+        {
+            dateCalculator.SubtractTimeFromDate(dateTimePicker1, int.Parse(Years.Text), int.Parse(Months.Text), int.Parse(Days.Text));
+        }
+
+        private void Dodaj_Click(object sender, EventArgs e)
+        {
+            dateCalculator.AddTimeToDate(dateTimePicker1, int.Parse(Years.Text), int.Parse(Months.Text), int.Parse(Days.Text));
         }
     }
 }
