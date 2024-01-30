@@ -15,7 +15,9 @@ namespace Projekt_winforms
         
         public string usernamein;
         public DateFormatter dateformatter;
-        
+        private SqlManager sqlmanager;
+        private int idholder;
+
 
         public Form2(string username)
         {
@@ -23,6 +25,8 @@ namespace Projekt_winforms
             usernamein = username;
             timer1.Start();
             dateformatter = new DateFormatter();
+            sqlmanager = new SqlManager(usernamein);
+            sqlmanager.FillCombo(comboBox1);
         }
 
 
@@ -46,10 +50,48 @@ namespace Projekt_winforms
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Date date = new Date(2000, 02, 17);
-            string datesql = dateformatter.ToSQLString(date); 
-            SqlManager sqlmanager = new SqlManager(usernamein);
-            sqlmanager.AddDate(datesql, "urodziny", usernamein);
+            sqlmanager.AddDate(this.dateTimePicker1.Text, this.textBox1.Text, usernamein);
+        }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Editbutton_Click(object sender, EventArgs e)
+        {
+            sqlmanager.EditDate(this.dateTimePicker1.Text, this.textBox1.Text, usernamein);
+        }
+
+        private void Deletebutton_Click(object sender, EventArgs e)
+        {
+            sqlmanager.DeleteDate(this.dateTimePicker1.Text, this.textBox1.Text, usernamein);
+        }
+
+        private void AddStringbutton_Click(object sender, EventArgs e)
+        {
+            string Descriptstr = textBox1.Text;
+            comboBox1.Items.Add(Descriptstr);
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            sqlmanager.ComboValuesReader(comboBox1, textBox1, dateTimePicker1);
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
