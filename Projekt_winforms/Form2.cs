@@ -28,6 +28,7 @@ namespace Projekt_winforms
             sqlmanager = new SqlManager(usernamein);
             dateCalculator = new DateCalculator();
             sqlmanager.FillCombo(comboBox1);
+            sqlmanager.ShowTableView(dataGridView1);
         }
 
 
