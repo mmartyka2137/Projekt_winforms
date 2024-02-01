@@ -56,7 +56,6 @@
     <Compile Include="DataStorage.cs" />
     <Compile Include="Date.cs" />
     <Compile Include="DateCalculator.cs" />
-    <Compile Include="DateChanger.cs" />
     <Compile Include="DateFormatter.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>

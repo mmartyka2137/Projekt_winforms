@@ -56,6 +56,7 @@
             // 
             this.password_txt.Location = new System.Drawing.Point(305, 202);
             this.password_txt.Name = "password_txt";
+            this.password_txt.PasswordChar = '★';
             this.password_txt.Size = new System.Drawing.Size(107, 20);
             this.password_txt.TabIndex = 2;
             // 
