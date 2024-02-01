@@ -166,5 +166,28 @@ namespace Projekt_winforms
                 MessageBox.Show(ex.Message);
             }
         }
+
+        public void ShowTableView(DataGridView dataGridView)
+        {
+            string myConnection = "datasource=localhost;port=3306;username=root;database=Daty;";
+            MySqlConnection myConn = new MySqlConnection(myConnection);
+            MySqlCommand tableselect = new MySqlCommand("select * from Daty.dates ;", myConn);
+            try
+            {
+                MySqlDataAdapter myDataAdapter = new MySqlDataAdapter();
+                myDataAdapter.SelectCommand = tableselect;
+                DataTable dataTable = new DataTable();
+                myDataAdapter.Fill(dataTable);
+                BindingSource bindingSource = new BindingSource();
+
+                bindingSource.DataSource = dataTable;
+                dataGridView.DataSource = bindingSource;
+                myDataAdapter.Update(dataTable);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
 }
